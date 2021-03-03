@@ -55,9 +55,9 @@ class Xaxis extends Axis{
 		$parser->addValue("type", "time");
 		$parser->addValue(
 			"time", (new ConfigParser([
-				"parser" => "dd.MM.yyyy HH:mm:ss",
 				"unit" => "minute",
-				"stepSize" => 5
+				"stepSize" => 5,
+				//"tooltipFormat" => "dd.MM.YYYY HH:mm:ss" //broken
 			]))->addValue("displayFormats", new ConfigParser(["minute" => "dd / HH:mm"]), false), false
 		);
 		$parser->addValue(
