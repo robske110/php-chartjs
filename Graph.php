@@ -131,7 +131,14 @@ class Graph{
 								return label;
 							},
 							title: function(tooltipItem, data) {
-								return chartStore.<?php echo($this->uniqueName); ?>.chart.config.options.scales.xAxes[0].labels[tooltipItem[0].index];
+								return (new Date(chartStore.<?php echo($this->uniqueName); ?>.chart.config.options.scales.xAxes[0].labels[tooltipItem[0].index])).toLocaleString("de-DE", {
+									day: '2-digit',
+									month: '2-digit',
+									year: '2-digit',
+									hour: '2-digit',
+									minute: '2-digit',
+									second: '2-digit'
+								});
 							}
 						}
 					},
