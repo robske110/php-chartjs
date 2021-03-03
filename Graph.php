@@ -99,6 +99,9 @@ class Graph{
 				options: {
 					<?php if(!$this->animate){ echo("animation: false,"); } ?>
 					elements: { point: { radius: 4, pointRadius: 6}, line: { tension: <?php echo($this->lineTension);?> } },
+					hover: {
+						intersect: false
+					},
 					tooltips: {
 						position: 'nearest',
 						mode: 'label',
